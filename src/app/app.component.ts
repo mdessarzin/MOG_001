@@ -14,7 +14,6 @@ import { InfosPage } from '../pages/infos/infos';
 import { SponsorsPage } from '../pages/sponsors/sponsors';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { PlayerPage } from '../pages/player/player';
-import { OneSignal } from '@ionic-native/onesignal';
 
 
 @Component({
@@ -31,7 +30,6 @@ export class MyApp {
       public statusBar: StatusBar, 
       public splashScreen: SplashScreen, 
       private iab: InAppBrowser, 
-      private oneSignal: OneSignal,
       private alertCtrl: AlertController) {
 
             this.initializeApp();
@@ -43,7 +41,6 @@ export class MyApp {
                   
                   this.statusBar.styleDefault();
                 this.splashScreen.hide();
-                this.handlerNotifications();
             }
             });
       
@@ -86,20 +83,6 @@ export class MyApp {
         const browser = this.iab.create('https://www.instagram.com/glissenville/?hl=fr','_blank',{location:'yes', hardwareback: 'no'}); 
   }
    
-    private handlerNotifications(){
-          this.oneSignal.startInit('a0a8ed74-488f-497b-b5fc-0810ed1690e3', '428241288967');
-          this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
-          this.oneSignal.handleNotificationOpened()
-          .subscribe(jsonData => {
-            let alert = this.alertCtrl.create({
-              title: jsonData.notification.payload.title,
-              subTitle: jsonData.notification.payload.body,
-              buttons: ['OK']
-            });
-            alert.present();
-            console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-          });
-          this.oneSignal.endInit();
-    }
+
    
 }
