@@ -14,3 +14,114 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+@import url('https://fonts.googleapis.com/css?family=Days+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+    #custom-overlay {
+        background-color: #000;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000000;
+        width: 100%;
+        background-color:transparent;
+    }
+
+ion-title {
+   font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+ion-nav {
+    box-shadow: -8px 8px 19px rgba(0,0,0,.45);
+}
+
+  ion-menu {
+    transition: all .5s ease;
+    background: #ffc54a !important;
+  }
+
+
+.menu ion-content {
+    background: #ffc54a !important;
+}
+
+.menu .item.item-trns {
+	background-color: rgba(0, 0, 0, 0);
+	color: white; 
+}
+
+.menu .item-md, .item-ios{
+    padding-left:20px !important;
+	background-color: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.menu .input-wrapper{
+    font-size:  20px !important;
+    color: #fff;
+font-family: 'Roboto', sans-serif;
+line-height: 23px;
+    text-transform: uppercase;
+}
+
+.theme-dark {
+  background-color: #303030;
+  h1, h2, h3,
+  h4, h5, h6,
+  p, .toolbar-title,
+  .bar-button-default {
+    color: white;
+  }
+  .toolbar-background{
+    transition: all 1.1s ease;
+    background-color: #212121;
+  }
+  .item-note,
+  .swiper-pagination-bullet {
+    transition: all 1.1s ease;
+  }
+
+  ion-content {
+
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    transition: all .5s ease;
+    color: white !important;
+  }
+
+  .item {
+    transition: none !important;
+    background-color: #100815;
+    color: white;
+  }
+
+  ion-card {
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  
+
+  .toggle-checked .toggle-icon {
+    transition: all 1.1s ease;
+    background-color: #717377;
+  }
+
+
+
+  ion-menu ion-icon{
+    // color:$darkside-red;
+  }
+  overlaying-view .toolbar-background,
+  overlaying-view .header-top {
+      background-color: #000 !important;
+  }
+}

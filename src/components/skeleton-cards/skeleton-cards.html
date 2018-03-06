@@ -1,0 +1,72 @@
+<div class="skeleton-cards"
+     [class.fade-out]="hasDataLoaded">
+
+     <ion-grid>
+        <ion-row>
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 *ngFor="let card of skeletonCards">
+                
+  <ion-card>
+    <ion-item>
+
+    
+      <h2>
+        {{card.name}}
+      </h2>
+      <p>
+        {{card.dob}}
+      </p>
+    </ion-item>
+
+    <img [src]="card.imgCover">
+
+    <ion-card-content>
+      <p>
+        {{card.quote}}
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button
+                clear
+                small
+                icon-start>
+          <ion-icon name='thumbs-up'></ion-icon>
+          <span class="skeleton-button-text">{{card.likes}}</span>
+        </button>
+      </ion-col>
+
+      <ion-col text-center>
+        <button ion-button
+                clear
+                small
+                icon-start>
+          <ion-icon name='text'></ion-icon>
+          {{card.comments}}
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button
+                color="dark"
+                clear
+                small
+                icon-start (tap)="facebookShare(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.link )">
+          <ion-icon name='logo-facebook'></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button
+                clear
+                small
+                icon-start>
+          <ion-icon name='text'></ion-icon>
+          {{card.comments}}
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+                                </ion-col>
+</ion-row>
+    </ion-grid>
+</div>

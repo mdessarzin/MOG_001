@@ -1,1 +1,29 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<div id="custom-overlay" [class.fade]="fade" *ngIf="splash">
+  <div id="perspective">
+    <div id="perspective-content">
+      <img src="assets/img/logo.svg"/>
+    </div>
+  </div>
+</div>
+<div class="menu">
+    <ion-menu [content]="content" id="menu" [content]="content" type="shift">
+
+        <ion-header>
+      <img style="padding-top:40px;" logo animation src="assets/images/logo/4.png" />
+  </ion-header>
+
+  <ion-content style="background-color: transparent;">
+    <ion-list class="item-trns" no-lines>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+         <button menuClose ion-item (click)="openInstagram()">
+        En images
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+</div>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

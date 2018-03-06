@@ -1,0 +1,18 @@
+<ion-header color="header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nos partenaires</ion-title>
+    <ion-buttons end>
+        <img alt="logo" class="icon" src="assets/images/logo/logo_header.png" height="40" >
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!-- Themes Expandable - Full image with CTA -->
+<ion-content> <expandable-layout-2
+     [data]="params.data"
+     [events]="params.events">
+   </expandable-layout-2>
+</ion-content>

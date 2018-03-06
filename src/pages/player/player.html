@@ -1,0 +1,41 @@
+<ion-header no-shadow>
+  <ion-navbar class="toolbar" color="dark">
+    <ion-title>
+      Radio Cristy
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="ambilData()">
+          <ion-icon name="refresh"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="hero-bg">
+
+  <img class="hero-home"
+  src="assets/imgs/hero-home.png">
+
+  <div (click)="klikBaca(post)" tappable no-padding *ngFor="let post of posts" class="posts-style">
+    <img class="post-image" [src]="post._embedded['wp:featuredmedia'][0].source_url">
+    <div class="post-title" text-wrap >{{post.title.rendered}}</div>
+    <div class="post-subtitle">{{post.date.split('T')[0]}}</div>
+  </div>
+
+</ion-content>
+
+<ion-footer class="footer-player">
+  <ion-grid >
+    <ion-row style="text-align: center;">
+      <ion-col >
+        <img *ngIf="!showButton" class="play-button" (click)="playStream()"
+        src="assets/imgs/play-button.png">
+        <img *ngIf="showButton" class="stop-button" (click)="stopStream()"
+        src="assets/imgs/stop.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+
+

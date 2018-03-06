@@ -1,0 +1,22 @@
+<ion-header color="header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Partenaires</ion-title>
+ <ion-buttons end>
+    <img alt="logo" class="icon" src="assets/images/logo/logo_header.png" height="40" >
+ </ion-buttons>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="grid-full"> <!--Theme Google Card - Styled cards 2-->
+<ion-grid>
+  <ion-row *ngIf="params.data != null">
+    <ion-col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 *ngFor="let item of params.data;let i = index">
+            <content style="color:#fff;">{{item.title.rendered}}</content>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

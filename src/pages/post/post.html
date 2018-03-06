@@ -1,0 +1,53 @@
+<ion-header no-border>
+  <ion-navbar [class.show-background]="showToolbar" color="header" >
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content  style="margin-top:-20px;" fullscreen parallax-header (ionScroll)="onScroll($event)"
+              [class.transition]="transition">
+ 
+       <div class="header-image" [style.background-image]="image"></div>
+ 
+    <div class="main-content">
+
+
+          <ion-item>
+            <h1>{{title}}</h1>
+            <h2 style="display: none;">Josh Morony</h2>
+            <p style="display: none;">Publié le {{date | date:'dd.MM.y'}}</p>
+          </ion-item>
+        
+            <ion-row>
+      <ion-col text-center>
+        <button ion-button
+                color="dark"
+                clear
+                small
+                icon-start (tap)="Share(text, title, image, link )">
+          <ion-icon name='share'></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col align-self-center
+               text-center>
+        <ion-note style="font-size: 11px !important;">Publié le {{date | date:'dd.MM.y'}}</ion-note>
+      </ion-col>
+    </ion-row>
+        
+        
+          <ion-card-content [innerHTML]="text">
+            
+          </ion-card-content>
+ 
+          <ion-row style="">
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-badge class="badge-dark">{{cat}}</ion-badge>
+              </button>
+            </ion-col>
+          </ion-row>
+ 
+ 
+    </div>
+ 
+</ion-content>

@@ -1,14 +1,57 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<ion-header color="header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Gliss'en ville</ion-title>
   </ion-navbar>
 </ion-header>
+    
+    <!--Theme Google Card - Full Image Cards-->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="grid-full">  
+      <ion-row justify-content-center align-items-center>
+    <ion-col class="cell-1" col-12>
+      <img style="max-height:190px; vertical-align: middle;" logo animation src="assets/images/logo/4.png" />
+
+    </ion-col>
+          </ion-row>
+      <ion-row>
+
+    <ion-col class="cell-2" col-6 justify-content-center (click)="openNews()"> 
+     actualité
+    </ion-col>
+    <ion-col class="cell-3"  col-6 justify-content-center (click)="openBilletterie()"> 
+      billetterie
+    </ion-col>
+    <ion-col class="cell-4"  col-6 justify-content-center (click)="openInfos()"> 
+      Les infos
+    </ion-col>
+    <ion-col class="cell-5"  col-6 (click)="openPartenaires()">
+      Partenaires
+    </ion-col>
+  </ion-row>
 </ion-content>
+
+
+<ion-footer style=" background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=);">
+    <ion-grid style="max-height: 110px;">
+      <ion-row align-items-center>
+        <ion-col col-2 style="max-width: 80px; text-align: center;" justify-content-center> 
+                <ion-icon class="icon-circle" (click)="startAudio()" [name]="buttonIcon"></ion-icon>
+            
+        </ion-col>
+                 
+        <ion-col col-7>
+            <span style="color:#fff;font-family: 'Days One', sans-serif; font-size: 11px; background-color: crimson;" id="songStation">&nbsp;ONE FM&nbsp;</span><br>
+            <span style="color:#fff;font-family: 'Days One', sans-serif; font-size: 11px;" id="songTitle">&nbsp;<br>&nbsp;</span>
+        
+          </ion-col>
+        <ion-col col-3  style="text-align: right;">
+          <img id="songCover" src="https://www.onefm.ch/wp-content/themes/mog-child/webradios/0.jpg" style="-webkit-box-shadow: -1px 3px 12px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 12px px rgba(0,0,0,0.75);
+box-shadow: -1px 3px 12px 0px rgba(0,0,0,0.75); max-height: 90px;" />
+        </ion-col>
+      </ion-row>
+    </ion-grid> 
+</ion-footer>

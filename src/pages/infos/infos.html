@@ -1,0 +1,28 @@
+<ion-header color="header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Informations</ion-title>
+    <ion-buttons end>
+        <img alt="logo" class="icon" src="assets/images/logo/logo_header.png" height="40" >
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">     
+    
+    <!--Theme Google Card - Full Image Cards-->
+<ion-grid no-padding  *ngIf="params.data != null" transparent>
+    <ion-row card-background-page transparent>
+        <ion-col no-padding col-12 col-md-12 col-lg-6 *ngFor="let item of params.data;let i = index">
+            <ion-card background-size text-left (tap)="showInfos(item.title.rendered, item.content.rendered)" transparent>
+                <div text-wrap card-title>{{item.title.rendered}}</div>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+    
+
+</ion-content>

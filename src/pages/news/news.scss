@@ -1,0 +1,55 @@
+page-news {
+         ion-content {
+}    
+    .textintro{
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 6.2em;
+        line-height: 1.8em;
+        color: #8e8e93 !important;
+        font-size: 14px !important;
+        font-weight: 300 !important;
+        letter-spacing: 1px;           
+    }
+    
+
+   .fade-in-left-item {
+     
+    }
+    
+  // Settings Card
+  ion-card {
+    box-shadow: none !important;
+    border-radius: $border-radius !important;
+
+    [card-image] {
+      position: relative;
+
+      ion-badge {
+        right: 8px;
+        bottom: 10px;
+        z-index: 3;
+        padding: 6px 15px !important;
+      }
+
+      [button-action-shit] {
+        bottom: 6px;
+        right: 16px;
+      }
+    }
+      
+      [card-title] {
+          font-family: 'Roboto', sans-serif;
+
+          font-weight: normal;
+          font-size: 0.85em !important;
+      }
+      
+    // Card Description
+    [card-subtitle] {
+      margin-top: 10px;
+        
+    }  
+  }
+}

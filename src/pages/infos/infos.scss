@@ -1,0 +1,80 @@
+page-infos {
+
+    ion-item {
+        color: #333;
+    }
+    
+   
+    ion-content {
+        
+}
+    
+      #webradios .scroll-content {
+        margin-top:0px !important;
+    }
+ 
+    
+        content-drawer .content {
+}
+
+    .toolbar-md {
+    padding: 0px !important;
+}
+    
+      ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    color: #fff;
+    font-family: 'Days One', sans-serif !important;
+    text-transform: uppercase !important;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+    font-family: 'Days One', sans-serif !important;
+    text-transform: uppercase !important;
+
+    }
+  // Settings Background Image
+  [card-background-page] {
+    ion-card {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPkcqutBwACfQFOj+CdbQAAAABJRU5ErkJggg==);
+
+      position: relative;
+      //height: 215px;
+      box-shadow: none;
+      margin-bottom: 0px;
+    }
+    // Card Title
+    [card-title] {
+        display: inline-block;
+        width:100%;
+      padding-top: 50px;
+    padding-bottom: 50px;
+      font-size: 1.7em !important;
+        text-align: center;
+      color: theme-colors('textColors', 'secondaryBase') !important;
+            font-family: 'Days One', sans-serif !important;
+    text-transform: uppercase !important;
+    }
+    // Card Subtitle;
+    [card-subtitle] {
+      padding: 22px;
+      position: absolute;
+      bottom: 0;
+      width: 95%;
+      color: theme-colors('textColors', 'secondaryBase') !important;
+    }
+  }
+}

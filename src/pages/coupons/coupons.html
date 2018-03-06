@@ -1,0 +1,73 @@
+<ion-header color="header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mes avantages</ion-title>
+ <ion-buttons end>
+ </ion-buttons>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Skeleton DOM -->
+  <skeleton-cards [hasDataLoaded]="hasLoaded" style="display:none;"></skeleton-cards>
+
+  <!-- Actual DOM -->
+  
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 *ngFor="let card of cards">
+    <ion-card class="fade-in" style="">
+
+    <img [src]="card.better_featured_image.media_details.sizes.wide.source_url" (tap)="showDetails(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.content.rendered, card.date, card.link )">
+
+    <ion-card-content (tap)="showDetails(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.content.rendered, card.date, card.link )">
+     <h1 (tap)="showDetails(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.content.rendered, card.date, card.link )">
+        {{card.title.rendered}}
+      </h1>
+        <p [innerHTML]="card.excerpt.rendered">
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button
+                color="dark"
+                clear
+                small
+                icon-start (tap)="whatsappShare(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.link )">
+          <ion-icon name='logo-whatsapp'></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button
+                color="dark"
+                clear
+                small
+                icon-start (tap)="facebookShare(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.link )">
+          <ion-icon name='logo-facebook'></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button
+                color="dark"
+                clear
+                small
+                icon-start (tap)="Share(card.excerpt.rendered, card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.link )">
+          <ion-icon name='share'></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col align-self-center
+               text-center>
+        <ion-note style="font-size: 11px !important;">{{card.date | date:'dd.MM.y'}}</ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+                </ion-col>
+</ion-row>
+    </ion-grid>
+</ion-content>

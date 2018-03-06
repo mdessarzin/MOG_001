@@ -1,3 +1,263 @@
 page-home {
+   
+    
+    .grid-full ion-row {
+  height: 50%;
+  padding: 0;
+  flex-wrap: wrap;
+}
 
+.grid-full ion-col {
+  text-align: center;
+    color: #fff;
+              font-family: 'Days One', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+    ion-grid {
+    height: 100%;
+    justify-content: center;
+}
+    
+.cell-1 {
+     align-items: center;
+    justify-content: center;
+    }
+.cell-2 {
+ display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+background-color: #0A467D;
+
+}
+.cell-3 {
+ display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;}
+.cell-4 {
+ display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;}
+.cell-5 {
+ display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;    background-color: #0A467D;
+}
+
+    
+    
+    
+    /*
+    
+    @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+@-webkit-keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+    
+    .logo { 
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+        background-image: url('../../assets/logo_header.png');
+        background-position: center 60px;
+        position: fixed;
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+        background-size: 286px 180px;
+}
+    */
+
+    ion-grid{
+    }
+
+    
+    
+    
+    
+    ion-item {
+        background-color:#f1f1f1 !important;
+        color: #333;
+    }
+    
+      
+   
+    
+    ion-card {
+    position: relative;
+    height: 170px;
+    width: calc(100%) !important;
+    border-radius: $border-radius !important;
+    box-shadow: none !important;
+
+    &[background-size] {
+      @include darkening-blend-mode;
+    }
+  }
+
+  .card-md, .card-ios {
+    margin: 0 !important;
+  }
+
+  [gallery-description] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    bottom: 0;
+    min-height: 45px;
+    z-index: 9;
+          font-family: 'Days One', sans-serif;
+    text-transform: uppercase;
+      color: #000;
+  }  
+
+    
+        .button{
+  font-size:26px;
+  color: #fff;
+  text-align:center;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+background: rgb(0, 161, 225);
+            
+    }
+ 
+    
+    
+    
+    
+    
+    .icon-circle, .icon-circle-large, .icon-circle-small{
+  position: relative;
+  display: inline-block;
+  margin: -1px;
+  /*padding: 16px;*/
+  
+  
+  width: 45px; /* 60*/
+	height: 45px; 
+  font-size:26px;
+        line-height: 45px;
+  
+   -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+	border-radius: 50%;
+  
+	
+  
+  border: 0px solid #ebebeb;
+ 
+  background: rgb(0, 161, 225); /*#ececec;ebebeb*/
+  color: #fff;
+  
+  text-align:center;
+  /*vertical-align: middle;*/
+}
+
+.icon-circle-large {
+  width: 100px;
+  height: 100px;
+  font-size: 64px; /* 64, originally 60 */
+  padding: 16px;
+  
+  
+}
+.icon-circle-small {
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+}
+
+
+/*.icon-circle i, .icon-circle-small i, .icon-circle-large i { vertical-align: middle; }*/
+
+.icon-circle-outline {
+   border: 1px solid rgb(0, 161, 225);
+   background: transparent;
+  color: rgb(0, 161, 225);
+   /*color: #8a6de9;*/
+}
+
+.icon-circle-outline i {  }
+/*icon-circle-bg and icon-circle and circle-bg*/
+
+
+
+
+/*http://davidwalsh.name/css-circles*/
+
+
+
+.item-icon-circle {
+   -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px; 
+  /* width and height can be anything, as long as they're equal */
+  
+  text-align:center;
+  color:white;
+  /* font size here wont work */
+
+}
+
+.item-icon-circle i {
+  /*text-align:center;
+  color:white;*/
+   /*margin: 0px auto;
+  padding: 0px;
+  display:block;*/
+  font-size:60px;
+}
+
+
+
+    
+
+/*
+    letter-spacing: 1px;
+  overflow: hidden;
+  
+  
+    perspective-origin: 40px 40px;
+    transform-origin: 40px 40px;
+    background: rgb(0, 161, 225) none repeat scroll 0% 0% / auto padding-box border-box;
+*/
+
+.bg-circle-alt {
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px; 
+}
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
 }
