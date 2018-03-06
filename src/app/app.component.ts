@@ -34,42 +34,16 @@ export class MyApp {
       private oneSignal: OneSignal,
       private alertCtrl: AlertController) {
 
-      
-       // OneSignal Code start:
-    // Enable to debug issues:
-    // window["plugins"].OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-
- 
-
-       
             this.initializeApp();
       
               this.platform.ready().then(() => {
-                  
-                  
-                  // OneSignal Code start:
-    // Enable to debug issues:
-    // window["plugins"].OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-
-    var notificationOpenedCallback = function(jsonData) {
-      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-        alert(JSON.stringify(jsonData));
-    };
-
-    window["plugins"].OneSignal
-      .startInit("a0a8ed74-488f-497b-b5fc-0810ed1690e3", "428241288967")
-      .handleNotificationOpened(notificationOpenedCallback)
-      .endInit();
-                  
-                  
-                  
               // Okay, so the platform is ready and our plugins are available.
               // Here you can do any higher level native things you might need.
             if (this.platform.is('cordova')) {
                   
                   this.statusBar.styleDefault();
                 this.splashScreen.hide();
-                
+                this.handlerNotifications();
             }
             });
       
@@ -87,6 +61,7 @@ export class MyApp {
     }
 
   initializeApp() {
+      
       
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -111,5 +86,20 @@ export class MyApp {
         const browser = this.iab.create('https://www.instagram.com/glissenville/?hl=fr','_blank',{location:'yes', hardwareback: 'no'}); 
   }
    
-    
+    private handlerNotifications(){
+          this.oneSignal.startInit('a0a8ed74-488f-497b-b5fc-0810ed1690e3', '428241288967');
+          this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+          this.oneSignal.handleNotificationOpened()
+          .subscribe(jsonData => {
+            let alert = this.alertCtrl.create({
+              title: jsonData.notification.payload.title,
+              subTitle: jsonData.notification.payload.body,
+              buttons: ['OK']
+            });
+            alert.present();
+            console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+          });
+          this.oneSignal.endInit();
+    }
+   
 }
