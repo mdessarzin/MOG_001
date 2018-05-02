@@ -1,10 +1,8 @@
 import { MenuShiftType } from '../pages/menu/shift-transition';
-
 import { Component, ViewChild } from '@angular/core';
 import { MenuController, AlertController, Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
 import { NewsPage } from '../pages/news/news';
 import { SplashPage } from '../pages/splash/splash';
@@ -14,7 +12,7 @@ import { InfosPage } from '../pages/infos/infos';
 import { SponsorsPage } from '../pages/sponsors/sponsors';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { PlayerPage } from '../pages/player/player';
-
+import { OneSignal } from '@ionic-native/onesignal';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,11 +28,28 @@ export class MyApp {
       public statusBar: StatusBar, 
       public splashScreen: SplashScreen, 
       private iab: InAppBrowser, 
-      private alertCtrl: AlertController) {
+      private alertCtrl: AlertController,
+      private oneSignal: OneSignal) {
 
             this.initializeApp();
       
               this.platform.ready().then(() => {
+                  
+                        this.oneSignal.startInit('a0a8ed74-488f-497b-b5fc-0810ed1690e3', '428241288967');
+
+                        this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+
+                        this.oneSignal.handleNotificationReceived().subscribe(() => {
+                         // do something when notification is received
+                        });
+
+                        this.oneSignal.handleNotificationOpened().subscribe(() => {
+                          // do something when a notification is opened
+                        });
+
+                        this.oneSignal.endInit();
+                  
+                  
               // Okay, so the platform is ready and our plugins are available.
               // Here you can do any higher level native things you might need.
             if (this.platform.is('cordova')) {
@@ -64,7 +79,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
      // this.statusBar.styleDefault();
-        this.statusBar.backgroundColorByHexString("#0a69a3");
+        this.statusBar.backgroundColorByHexString("#32bacd");
         //this.statusBar.overlaysWebView(true)
       this.splashScreen.hide();
     });

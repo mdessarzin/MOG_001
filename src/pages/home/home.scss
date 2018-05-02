@@ -10,9 +10,11 @@ page-home {
 .grid-full ion-col {
   text-align: center;
     color: #fff;
-              font-family: 'Days One', sans-serif;
+    /* font-family: 'Days One', sans-serif; */
+       font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-size: 1.4em;
+    font-weight:  bolder;
 }
 
     ion-grid {
@@ -30,7 +32,7 @@ page-home {
   flex-direction: column;
   text-align: center;
 
-background-color: #0A467D;
+background-color: #32bacd;
 
 }
 .cell-3 {
@@ -47,7 +49,7 @@ background-color: #0A467D;
  display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: center;    background-color: #0A467D;
+  text-align: center;    background-color: #32bacd;
 }
 
     
@@ -134,7 +136,7 @@ background-color: #0A467D;
             display: inline-block;
             text-align: center;
             width: 100%;
-background: rgb(0, 161, 225);
+background: #32bacd;
             
     }
  
@@ -163,7 +165,7 @@ background: rgb(0, 161, 225);
   
   border: 0px solid #ebebeb;
  
-  background: rgb(0, 161, 225); /*#ececec;ebebeb*/
+  background: #32bacd; /*#ececec;ebebeb*/
   color: #fff;
   
   text-align:center;

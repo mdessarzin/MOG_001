@@ -33,6 +33,7 @@ import { AudioStreamProvider } from '../providers/audio-stream/audio-stream';
 import { DirectivesModule } from '../directives/directives.module';
 import { ComponentsModule } from '../components/components.module';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { OneSignal } from '@ionic-native/onesignal';
 
 
 Pro.init('d159a702', {
@@ -112,7 +113,8 @@ export class MyErrorHandler implements ErrorHandler {
       GoogleAnalytics,
       AudioStreamProvider,
       SocialSharing,
-       IonicErrorHandler
+       IonicErrorHandler,
+      OneSignal
   ]
 })
 export class AppModule {}

@@ -32,7 +32,7 @@ page-infos {
     font-size: 2.0em;
     width: 100%;
     color: #fff;
-    font-family: 'Days One', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     text-transform: uppercase !important;
   }
 
@@ -42,14 +42,14 @@ page-infos {
     top: 52%;
     width: 100%;
     color: #fff;
-    font-family: 'Days One', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     text-transform: uppercase !important;
 
     }
   // Settings Background Image
   [card-background-page] {
     ion-card {
-background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPkcqutBwACfQFOj+CdbQAAAABJRU5ErkJggg==);
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsuPf6DAAHRgMX5obtrAAAAABJRU5ErkJggg==);
 
       position: relative;
       //height: 215px;
@@ -65,7 +65,7 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYA
       font-size: 1.7em !important;
         text-align: center;
       color: theme-colors('textColors', 'secondaryBase') !important;
-            font-family: 'Days One', sans-serif !important;
+     font-family: 'Roboto', sans-serif !important;
     text-transform: uppercase !important;
     }
     // Card Subtitle;
