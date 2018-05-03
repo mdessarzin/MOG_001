@@ -152,7 +152,7 @@ this.ga.startTrackerWithId('UA-2736326-3')
       skipForwardInterval: 0, // display number for skip forward, optional, default: 0
       skipBackwardInterval: 0, // display number for skip backward, optional, default: 0
     // iOS only, optional
-      album       : 'Radio Cristy Player',     // optional, default: ''
+      album       : 'One FM',     // optional, default: ''
       duration : 0, // optional, default: 0
       elapsed : 0, // optional, default: 0
     

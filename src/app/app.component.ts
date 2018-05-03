@@ -65,7 +65,6 @@ export class MyApp {
             this.pages = [
               { title: 'Home', component: HomePage },
               { title: 'Actualité', component: NewsPage },
-              { title: 'Mes avantages', component: CouponsPage },
               { title: 'Informations', component: InfosPage },
               { title: 'Partenaires', component: SponsorsPage }
             ];
