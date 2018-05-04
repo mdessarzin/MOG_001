@@ -15,7 +15,7 @@
 <ion-grid>
   <ion-row *ngIf="params.data != null">
     <ion-col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 *ngFor="let item of params.data;let i = index">
-            <content style="color:#fff;">{{item.title.rendered}}</content>
+            <content style="color:#fff; text-align:center !important;" [innerHTML]="item.content.rendered"></content>
     </ion-col>
   </ion-row>
 </ion-grid>
