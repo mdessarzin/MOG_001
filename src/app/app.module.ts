@@ -85,9 +85,15 @@ export class MyErrorHandler implements ErrorHandler {
       DirectivesModule,
     ComponentsModule,
       
-    IonicModule.forRoot(MyApp, {
-        preloadModules: true
-    })
+IonicModule.forRoot(MyApp, {
+        preloadModules: true,
+		backButtonText: 'Retour',
+      iconMode: 'ios',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+		menuType: "push",
+		backButtonIcon: "ios-arrow-back"
+	})
   ],
     
   bootstrap: [IonicApp],

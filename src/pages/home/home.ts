@@ -324,6 +324,7 @@ startAudio() {
     }
 
 private openBilletterie(){
-            const browser = this.iab.create('https://etickets.infomaniak.com/shop/feFlKGWVOg/','_blank',{location:'yes', hardwareback: 'no'}); 
+	 window.open("https://etickets.infomaniak.com/shop/feFlKGWVOg/", '_system');
+         //   const browser = this.iab.create('https://etickets.infomaniak.com/shop/feFlKGWVOg/','_blank',{location:'yes', hardwareback: 'no'}); 
 }
 }
