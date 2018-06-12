@@ -4,31 +4,12 @@
   </ion-navbar>
 </ion-header>
  
-<ion-content  style="margin-top:-20px;" fullscreen parallax-header (ionScroll)="onScroll($event)"
+<ion-content  style="margin-top:-20px;" fullscreen (ionScroll)="onScroll($event)"
               [class.transition]="transition">
  
        <div class="header-image" [style.background-image]="image"></div>
  
     <div class="main-content">
-
-
-           <h1>{{title}}</h1>
-        
-            <ion-row>
-      <ion-col text-center>
-        <button ion-button
-                color="dark"
-                clear
-                small
-                icon-start (tap)="Share(text, title, image, link )">
-          <ion-icon name='share'></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col align-self-center text-center>
-        <ion-note style="font-size: 11px !important;">Publié le {{date | date:'dd.MM.y'}}</ion-note>
-      </ion-col>
-    </ion-row>
-        
         
           <ion-card-content [innerHTML]="text">
             
