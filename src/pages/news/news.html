@@ -28,9 +28,7 @@
         <img [src]="card.acf.app_avatar">
       </ion-avatar>
 
-      <h2 (tap)="showDetails(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.content.rendered, card.date, card.link )">
-        {{card.title.rendered}}
-      </h2>
+      <h2 (tap)="showDetails(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.content.rendered, card.date, card.link )" [innerHTML]="card.title.rendered"></h2>
       <p (tap)="showDetails(card.title.rendered, card.better_featured_image.media_details.sizes.wide.source_url, card.content.rendered, card.date, card.link )">
         {{card.pure_taxonomies.app_type_contenu[0].name}}
       </p>
